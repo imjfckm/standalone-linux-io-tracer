@@ -161,7 +161,7 @@ def test_fs_statistics(fs):
         root_dir_WiF = (Ay_written + Bx_written) / root_dir_workset
 
         trace_path = iotrace.get_latest_trace_path()
-        stats = parse_fs_stats(iotrace.get_fs_statistics(trace_path))
+        stats = parse_fs_stats(iotrace.get_fs_stats(trace_path))
 
         prefix_stats = {
             stat.file_name_prefix: stat for stat in stats if type(stat) == FileTraceStatistics

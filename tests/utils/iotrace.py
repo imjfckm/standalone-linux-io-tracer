@@ -312,7 +312,7 @@ class IotracePlugin:
         if output == "":
             raise CmdException("Invalid statistics")
 
-        return parse_json(output.stdout)
+        return parse_json(output)[0]["entries"]
 
     @staticmethod
     def get_trace_events(trace_path: str, raw: bool = False, shortcut: bool = False) -> list:
